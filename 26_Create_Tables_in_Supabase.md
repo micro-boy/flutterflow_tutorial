@@ -100,7 +100,7 @@ Konfigurasi kolom-kolom berikut:
 
 | Nama Kolom | Tipe | Nilai Default | Properti |
 |------------|------|---------------|----------|
-| `user_id` | `uuid` | `NULL` | Primary Key ✅ |
+| `user_id` | `int8` | `NULL` | Primary Key ✅ |
 | `created_at` | `timestamp` | `now()` | Auto-timestamp |
 | `name` | `text` | `NULL` | Nullable ✅ |
 | `email` | `text` | `NULL` | Nullable ✅ |
@@ -108,11 +108,11 @@ Konfigurasi kolom-kolom berikut:
 
 **Penjelasan Kolom:**
 
-1. **user_id:** Identifier unik yang akan terhubung ke `auth.users`
-2. **created_at:** Otomatis diatur saat record dibuat
-3. **name:** Nama tampilan pengguna
-4. **email:** Email publik (bisa berbeda dari email auth)
-5. **profilePic:** URL ke gambar profil (disimpan sebagai text)
+1. **user_id:** Identifier unik bertipe integer (int8) sebagai Primary Key
+2. **created_at:** Otomatis diatur saat record dibuat dengan fungsi now()
+3. **name:** Nama tampilan pengguna (nullable)
+4. **email:** Email publik pengguna (nullable)
+5. **profilePic:** URL ke gambar profil disimpan sebagai text (nullable)
 
 ## Langkah 4: Setup Foreign Key ke Auth
 
