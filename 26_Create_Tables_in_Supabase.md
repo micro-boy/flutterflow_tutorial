@@ -118,6 +118,10 @@ Konfigurasi kolom-kolom berikut:
 4. **email:** Email publik pengguna (nullable)
 5. **profilePic:** URL ke gambar profil disimpan sebagai text (nullable)
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/bae488b8-6717-49a1-b315-f30c0fdcc56b" width="600">
+</div>
+
 ## Langkah 4: Setup Foreign Key ke Auth
 
 ### 4.1 Mengapa Foreign Key?
