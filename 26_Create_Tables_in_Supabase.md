@@ -138,15 +138,11 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
    - Pilih Schema: **`auth`**
    - Pilih Tabel: **`users`**
 
-2. **Mapping Kolom:**
-   ```
-   public.user.user_id → auth.users.id
-   ```
 <div align="center">
    <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="400">
 </div>
 
-3. **Aksi Referensial:**
+2. **Aksi Referensial:**
    - **On Update:** No action
    - **On Delete:** Cascade ✅
 
@@ -215,18 +211,17 @@ Konfigurasi kolom-kolom berikut:
    - Pilih Schema: **`public`**
    - Pilih Tabel: **`user`**
 
-2. **Mapping Kolom:**
-   ```
-   public.userPost.user_id → public.user.user_id
-   ```
-
-3. **Aksi Referensial:**
+2. **Aksi Referensial:**
    - **On Update:** No action
    - **On Delete:** Cascade ✅
 
 **Hasil Cascade:**
 - Ketika pengguna dihapus, semua postingan mereka akan otomatis terhapus juga
 - Menjaga konsistensi data dan mencegah orphaned records
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/bd2b461e-2eef-43ce-a4f0-6edcd372a183" width="600">
+</div>
 
 ### 6.2 Simpan Tabel UserPost
 
