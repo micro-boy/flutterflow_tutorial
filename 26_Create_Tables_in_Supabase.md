@@ -170,7 +170,7 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
 - **Deskripsi:** `Postingan dan konten yang dibuat pengguna`
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/7ceccd35-1fdc-44fe-82aa-fc4abf2393d7" width="600">
+   <img src="https://github.com/user-attachments/assets/0771fe03-6a65-49cb-87cd-48b258a81b7d" width="600">
 </div>
 
 **Pengaturan Keamanan:**
@@ -201,6 +201,10 @@ Konfigurasi kolom-kolom berikut:
 3. **user_id:** Terhubung ke pengguna yang membuat postingan
 4. **postPic:** URL ke gambar postingan
 5. **description:** Konten/caption postingan
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/bd2b461e-2eef-43ce-a4f0-6edcd372a183" width="600">
+</div>
 
 ## Langkah 6: Setup Foreign Key antar Tabel
 
