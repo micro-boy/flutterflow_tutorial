@@ -143,7 +143,7 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
    public.user.user_id → auth.users.id
    ```
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="600">
+   <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="400">
 </div>
 
 3. **Aksi Referensial:**
