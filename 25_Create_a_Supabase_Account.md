@@ -128,53 +128,95 @@ Klik **"SECURITY OPTIONS"** untuk konfigurasi tambahan (opsional untuk pemula).
 1. Review semua konfigurasi
 2. Klik tombol **"Create new project"**
 
-## Langkah 5: Mendapatkan API Keys
+## Langkah 5: Mengakses API Keys
 
-### 5.1 Project Setup
+### 5.1 Project Setup Selesai
 
-Setelah project dibuat, Supabase akan melakukan provisioning:
+Setelah project berhasil dibuat, Supabase akan otomatis menyediakan:
 
-- **"Setting up project"** - Status akan ditampilkan
-- **"We are provisioning your database and API endpoints"**
-- **"This may take a few minutes"**
+- **Database PostgreSQL** yang siap digunakan
+- **API endpoints** untuk akses data
+- **API Keys** yang sudah ter-generate otomatis
 
-### 5.2 Sambil Menunggu
+### 5.2 Mengakses API Settings
 
-Selama proses setup, Anda bisa:
+1. Dari dashboard project, klik **Settings** di sidebar kiri (ikon gear)
+2. Di section **"CONFIGURATION"**, pilih **API**
+3. Anda akan melihat halaman **"API Settings"** dengan semua informasi yang diperlukan
 
-- **Browse Supabase documentation** 
-- **Try refreshing after a couple of minutes**
-- **Contact support team** jika ada masalah
+**💡 Sidebar Navigation yang tersedia:**
+- **PROJECT SETTINGS:** General, Compute and Disk, Infrastructure, Integrations, Add Ons, Vault
+- **CONFIGURATION:** Database, Data API, Authentication, Storage, Edge Functions, Log Drains  
+- **BILLING:** Subscription, Usage
 
-### 5.3 Project API Keys
+### 5.3 Project URL
 
-Setelah setup selesai, Anda akan mendapatkan:
+Di halaman API Settings, Anda akan menemukan:
 
-#### 5.3.1 Public API Key (anon/public)
+**Project URL:**
+```
+https://[project-id].supabase.co
+```
+- URL ini adalah RESTful endpoint untuk query dan manage database
+- Klik tombol **"Copy"** untuk menyalin URL
+
+### 5.4 API Keys (Sudah Tersedia Otomatis)
+
+⚠️ **Catatan Penting:** API Keys sudah otomatis ter-generate, tidak perlu dibuat manual.
+
+#### 5.4.1 Anon/Public Key
 ```javascript
-// Contoh format (jangan gunakan key ini)
+anon | public
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI...
 ```
 
 **Kegunaan:**
-- Aman untuk digunakan di browser
-- Untuk Row Level Security pada tabel
-- Sesuai dengan kebijakan yang dikonfigurasi
+- ✅ Aman untuk digunakan di browser/aplikasi client
+- ✅ Bekerja dengan Row Level Security 
+- ✅ Mengikuti kebijakan keamanan yang dikonfigurasi
+- Klik **"Copy"** untuk menyalin key
 
-#### 5.3.2 Service Role Key (secret)
+#### 5.4.2 Service Role Key (Secret)
 ```javascript
-// Key ini memiliki kemampuan bypass Row Level Security
+service_role | secret
 **** **** **** ****
 ```
 
-**⚠️ Peringatan:**
-- **Jangan bagikan key ini secara publik**
-- **Memiliki kemampuan bypass Row Level Security**
-- Gunakan hanya di server-side
+**⚠️ Peringatan Keamanan:**
+- 🚫 **JANGAN bagikan key ini secara publik**
+- 🚫 **Memiliki kemampuan bypass Row Level Security**
+- ✅ Gunakan hanya di server-side/backend
+- ✅ Jika bocor, segera generate JWT secret baru
+- Klik **"Reveal"** untuk melihat key lengkap
 
-### 5.4 Client Documentation
+### 5.5 Upcoming Changes (Q2 2025)
 
-Klik **"Client Docs"** untuk melihat dokumentasi penggunaan API.
+📢 **Info Penting:**
+- `anon` dan `service_role` API keys akan berubah menjadi `publishable` dan `secret`
+- Fungsionalitas tetap sama, hanya nama yang berubah
+- Klik **"Read the announcement"** untuk detail lengkap
+
+### 5.6 Copy API Keys
+
+1. **Public Key:** Klik tombol **"Copy"** di sebelah anon key
+2. **Secret Key:** Klik **"Reveal"** terlebih dahulu, lalu **"Copy"**
+3. Simpan kedua keys ini dengan aman untuk digunakan di aplikasi
+
+### 5.7 Menggunakan API Keys
+
+**Di Aplikasi Frontend (React, Flutter, etc):**
+```javascript
+// Gunakan anon/public key
+const supabaseUrl = 'https://your-project.supabase.co'
+const supabaseAnonKey = 'your-anon-key'
+```
+
+**Di Backend/Server:**
+```javascript
+// Gunakan service_role/secret key (hati-hati!)
+const supabaseUrl = 'https://your-project.supabase.co'  
+const supabaseServiceKey = 'your-service-role-key'
+```
 
 ## Troubleshooting
 
@@ -186,13 +228,19 @@ Klik **"Client Docs"** untuk melihat dokumentasi penggunaan API.
    - Contact support jika masalah berlanjut
 
 2. **Lupa Database Password**
-   - Anda bisa reset password di project settings
-   - Generate password baru jika diperlukan
+   - Pergi ke Settings > Database
+   - Reset password database jika diperlukan
+   - Generate password baru
 
-3. **API Key tidak muncul**
-   - Tunggu hingga provisioning selesai
-   - Refresh halaman
-   - Periksa di tab "Settings" > "API"
+3. **Tidak bisa mengakses API Settings**
+   - Pastikan project sudah selesai ter-setup
+   - Refresh halaman dashboard
+   - Periksa di sidebar Settings > API
+
+4. **API Key tidak berfungsi**
+   - Pastikan menggunakan anon key untuk client-side
+   - Pastikan menggunakan service_role key untuk server-side
+   - Periksa konfigurasi Row Level Security di tabel
 
 ## Selanjutnya
 
