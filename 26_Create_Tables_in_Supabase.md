@@ -169,6 +169,10 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
 - **Nama Tabel:** `userPost`
 - **Deskripsi:** `Postingan dan konten yang dibuat pengguna`
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/7ceccd35-1fdc-44fe-82aa-fc4abf2393d7" width="600">
+</div>
+
 **Pengaturan Keamanan:**
 - ❌ **Jangan centang "Enable Row Level Security"**
 - ❌ **Jangan centang "Enable Realtime"**
