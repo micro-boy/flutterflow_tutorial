@@ -236,14 +236,6 @@ Konfigurasi kolom-kolom berikut:
 
 ### 7.1 Struktur Tabel Lengkap
 
-#### 🔐 auth.users (Bawaan Supabase)
-```sql
-├── id (uuid, PK)
-├── email (text)
-├── encrypted_password (text)
-└── created_at (timestamp)
-```
-
 #### 👤 public.user (Dibuat Manual)
 ```sql
 ├── user_id (uuid, PK, FK → auth.users.id)
@@ -264,7 +256,7 @@ Konfigurasi kolom-kolom berikut:
 
 ### 7.2 Alur Relasi Database
 ```
-auth.users.id ←→ public.user.user_id ←→ public.userPost.user_id
+public.user.user_id ←→ public.userPost.user_id
 ```
 
 ### 7.3 Konsep Kunci yang Dipelajari
