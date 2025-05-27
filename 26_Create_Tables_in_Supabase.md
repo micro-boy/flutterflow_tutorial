@@ -171,7 +171,7 @@ Konfigurasi kolom-kolom berikut:
 |------------|------|---------------|----------|
 | `post_id` | `int8` | `NULL` | Primary Key ✅ |
 | `created_at` | `timestamp` | `now()` | Auto-timestamp |
-| `user_id` | `uuid` | `NULL` | Foreign Key |
+| `user_id` | `uuid` | `NULL` | Nullable ✅ |
 | `postPic` | `text` | `NULL` | Nullable ✅ |
 | `description` | `text` | `NULL` | Nullable ✅ |
 
