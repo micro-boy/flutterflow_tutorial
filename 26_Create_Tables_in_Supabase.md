@@ -71,7 +71,11 @@ Dalam tutorial komprehensif ini, Anda akan belajar cara membuat tabel di Supabas
 
 2. **Informasi Tabel**
    - **Nama Tabel:** `user`
-   - **Deskripsi:** `Informasi profil pengguna publik`
+   - **Deskripsi:** `Public user profile information
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/98989b5d-13a8-487e-9b5c-458e8c8db890" width="600">
+</div>
 
 ### 3.2 Konfigurasi Keamanan
 
