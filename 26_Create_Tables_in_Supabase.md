@@ -236,6 +236,10 @@ Konfigurasi kolom-kolom berikut:
 
 ### 7.1 Struktur Tabel Lengkap
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/527a03dd-3028-4d3c-9fc3-a537c8a81b73" width="400">
+</div>
+
 #### 👤 public.user (Dibuat Manual)
 ```sql
 ├── user_id (uuid, PK, FK → auth.users.id)
