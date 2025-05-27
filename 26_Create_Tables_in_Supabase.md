@@ -211,17 +211,21 @@ Konfigurasi kolom-kolom berikut:
    - Pilih Schema: **`public`**
    - Pilih Tabel: **`user`**
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/e2d92734-34e0-4558-84fb-19f04ab00b5a" width="400">
+</div>
+
 2. **Aksi Referensial:**
    - **On Update:** No action
    - **On Delete:** Cascade ✅
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/0797474e-d284-4717-b390-475f9e7b3441" width="600">
+</div>
+
 **Hasil Cascade:**
 - Ketika pengguna dihapus, semua postingan mereka akan otomatis terhapus juga
 - Menjaga konsistensi data dan mencegah orphaned records
-
-<div align="center">
-   <img src="https://github.com/user-attachments/assets/bd2b461e-2eef-43ce-a4f0-6edcd372a183" width="600">
-</div>
 
 ### 6.2 Simpan Tabel UserPost
 
