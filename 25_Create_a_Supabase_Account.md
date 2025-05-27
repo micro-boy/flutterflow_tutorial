@@ -6,7 +6,7 @@
 - [Langkah 2: Sign In ke Akun](#langkah-2-sign-in-ke-akun)
 - [Langkah 3: Membuat Project Baru](#langkah-3-membuat-project-baru)
 - [Langkah 4: Konfigurasi Project](#langkah-4-konfigurasi-project)
-- [Langkah 5: Mendapatkan API Keys](#langkah-5-mendapatkan-api-keys)
+- [Langkah 5: Mendapatkan API Keys](25_Create_a_Supabase_Account.md#langkah-5-mengakses-api-keys)
 - [Troubleshooting](#troubleshooting)
 - [Selanjutnya](#selanjutnya)
 
