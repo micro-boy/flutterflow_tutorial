@@ -142,10 +142,17 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
    ```
    public.user.user_id → auth.users.id
    ```
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="600">
+</div>
 
 3. **Aksi Referensial:**
    - **On Update:** No action
    - **On Delete:** Cascade ✅
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/c6c68bb5-f873-4f43-8ce7-0a060b5552bb" width="600">
+</div>
 
 > **⚠️ Cascade Delete:** Ketika pengguna dihapus dari `auth.users`, profil mereka di `public.user` akan otomatis terhapus juga.
 
@@ -153,6 +160,10 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
 
 1. Klik **"Save"** untuk membuat tabel
 2. Sistem akan otomatis memperbarui tipe `user_id` agar sesuai dengan `auth.users.id` (uuid)
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/c6c68bb5-f873-4f43-8ce7-0a060b5552bb" width="600">
+</div>
 
 ## Langkah 5: Membuat Tabel UserPost
 
