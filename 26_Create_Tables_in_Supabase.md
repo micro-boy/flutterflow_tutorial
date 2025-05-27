@@ -250,15 +250,6 @@ Sebelum melanjutkan, pastikan:
 - ✅ Anda memiliki akses ke Supabase dashboard
 - ✅ Project keys Supabase sudah dicatat
 
-### 📋 Yang Perlu Disiapkan
-
-Untuk tutorial selanjutnya, Anda akan membutuhkan:
-
-- **Supabase Project URL** - Dari dashboard Supabase
-- **Supabase Anon Key** - Untuk koneksi client-side
-- **FlutterFlow Account** - Platform untuk membuat aplikasi
-- **Screenshot/dokumentasi** - Untuk mengikuti tutorial step-by-step
-
 ---
 
 ## 🎉 Selamat!
