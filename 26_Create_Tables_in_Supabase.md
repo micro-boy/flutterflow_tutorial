@@ -74,7 +74,7 @@ Dalam tutorial komprehensif ini, Anda akan belajar cara membuat tabel di Supabas
    - **Deskripsi:** `Public user profile information
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/98989b5d-13a8-487e-9b5c-458e8c8db890" width="600">
+   <img src="https://github.com/user-attachments/assets/98989b5d-13a8-487e-9b5c-458e8c8db890" width="400">
 </div>
 
 ### 3.2 Konfigurasi Keamanan
@@ -119,7 +119,7 @@ Konfigurasi kolom-kolom berikut:
 5. **profilePic:** URL ke gambar profil disimpan sebagai text (nullable)
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/bae488b8-6717-49a1-b315-f30c0fdcc56b" width="600">
+   <img src="https://github.com/user-attachments/assets/bae488b8-6717-49a1-b315-f30c0fdcc56b" width="400">
 </div>
 
 ## Langkah 4: Setup Foreign Key ke Auth
@@ -143,7 +143,7 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
    public.user.user_id → auth.users.id
    ```
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="600">
+   <img src="https://github.com/user-attachments/assets/216e72a0-6402-4335-9c8a-e13db00c82f7" width="400">
 </div>
 
 3. **Aksi Referensial:**
@@ -151,7 +151,7 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
    - **On Delete:** Cascade ✅
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/c6c68bb5-f873-4f43-8ce7-0a060b5552bb" width="600">
+   <img src="https://github.com/user-attachments/assets/c6c68bb5-f873-4f43-8ce7-0a060b5552bb" width="400">
 </div>
 
 > **⚠️ Cascade Delete:** Ketika pengguna dihapus dari `auth.users`, profil mereka di `public.user` akan otomatis terhapus juga.
@@ -160,10 +160,6 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
 
 1. Klik **"Save"** untuk membuat tabel
 2. Sistem akan otomatis memperbarui tipe `user_id` agar sesuai dengan `auth.users.id` (uuid)
-
-<div align="center">
-   <img src="https://github.com/user-attachments/assets/c6c68bb5-f873-4f43-8ce7-0a060b5552bb" width="600">
-</div>
 
 ## Langkah 5: Membuat Tabel UserPost
 
