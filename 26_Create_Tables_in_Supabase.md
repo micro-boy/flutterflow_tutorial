@@ -76,11 +76,23 @@ Dalam tutorial komprehensif ini, Anda akan belajar cara membuat tabel di Supabas
 ### 3.2 Konfigurasi Keamanan
 
 **Enable Row Level Security (RLS):**
-- ✅ **Direkomendasikan** untuk produksi
-- Membatasi akses dan memerlukan kebijakan untuk query data
-- Untuk pembelajaran: bisa dinonaktifkan sementara
+- ❌ **Jangan dicentang** untuk tutorial ini
+- Biarkan checkbox kosong agar tabel dapat diakses secara publik
+- Sistem akan menampilkan peringatan: *"You are allowing anonymous access to your table"*
+- Peringatan ini normal untuk keperluan pembelajaran
 
-> **💡 Tip:** Selalu aktifkan RLS di aplikasi production untuk keamanan data.
+**Enable Realtime:**
+- ❌ **Jangan dicentang** untuk tutorial ini
+- Fitur realtime tidak diperlukan untuk pembelajaran dasar
+- Dapat diaktifkan nanti jika dibutuhkan
+
+**Pesan Peringatan yang Muncul:**
+```
+⚠️ You are allowing anonymous access to your table
+The table user will be publicly writable and readable
+```
+
+> **⚠️ Penting:** Untuk tutorial ini, RLS sengaja dinonaktifkan agar mudah diakses. Di aplikasi production, selalu aktifkan RLS untuk keamanan data.
 
 ### 3.3 Definisi Kolom Tabel User
 
@@ -143,9 +155,11 @@ Foreign key menghubungkan tabel user publik Anda ke sistem autentikasi, memastik
 - **Deskripsi:** `Postingan dan konten yang dibuat pengguna`
 
 **Pengaturan Keamanan:**
-- **Nonaktifkan RLS** untuk tutorial
-- Hapus centang **"Enable Row Level Security"**
+- ❌ **Jangan centang "Enable Row Level Security"**
+- ❌ **Jangan centang "Enable Realtime"**
+- Biarkan kedua checkbox kosong (sama seperti tabel user sebelumnya)
 - Ini membuat tabel dapat dibaca/ditulis secara publik untuk pembelajaran
+- Sistem akan menampilkan peringatan yang sama tentang anonymous access
 
 > **⚠️ Catatan Produksi:** Selalu aktifkan RLS di aplikasi nyata.
 
